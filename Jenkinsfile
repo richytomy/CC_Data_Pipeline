@@ -8,16 +8,20 @@ pipeline {
                 def userInput = input(
                  id: 'userInput', message: 'Enter the cart file:?', 
                  parameters: [
-                 [$class: 'TextParameterDefinition', defaultValue: 'None', description: 'Name of cart file', name: 'Cartfile']
+                 [$class: 'TextParameterDefinition', defaultValue: 'None', description: 'Name of cart file', name: 'Cartfile'],
+                 [$class: 'TextParameterDefinition', defaultValue: 'None', description: 'Test Info file', name: 'Test']
                 ])
-                echo ("cart file requested: "+userInput['Cartfile'])
+                echo ("Cart file requested: "+userInput['Cartfile'])
+                echo ("Test Info file path: "+userInput['Test'])
 
                 }
             }
         }
         stage('PreFetch') {
             steps {
-                sh 'prefetch -o kart /vol_c/richy/test.sra /vol_c/richy/'+userInput['Cartfile']
+                echo 'Finding cartfiles..'
+                echo ("IQA Sheet Path: "+userInput['Cartfile'])
+                
             }
         }
         stage('Test') {
