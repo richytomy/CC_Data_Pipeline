@@ -12,7 +12,7 @@ pipeline {
                  [$class: 'TextParameterDefinition', defaultValue: 'None', description: 'Test Info file', name: 'Test']
                 ])
                 echo ("Cart file requested: "+userInput['Cartfile'])
-                echo ("Test Info file path: "+userInput['Test'])
+                sh 'prefetch -o kart /vol_c/richy/test.sra /vol_c/richy/cart_DAR51524_201901081856.krt'
 
                 }
             }
@@ -20,7 +20,6 @@ pipeline {
         stage('PreFetch') {
             steps {
                 echo 'Finding cartfiles..'
-                echo ("IQA Sheet Path: "+userInput['Cartfile'])
                 
             }
         }
