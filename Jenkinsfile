@@ -10,8 +10,8 @@ pipeline {
                 def userInput = input(
                  id: 'userInput', message: 'Enter the cart file:?', 
                  parameters: [
-                 //[$class: 'TextParameterDefinition', defaultValue: 'None', description: 'Name of cart file', name: 'Cartfile'],
-                 //[$class: 'TextParameterDefinition', defaultValue: 'None', description: 'Test Info file', name: 'Test']
+                 [$class: 'TextParameterDefinition', defaultValue: 'None', description: 'Name of cart file', name: 'Cartfile'],
+                 [$class: 'TextParameterDefinition', defaultValue: 'None', description: 'Test Info file', name: 'Test']
                 ])
                 echo ("Cart file requested: "+userInput['Cartfile'])
                 //sh 'export PATH=/vol_c/richy/sratoolkit.2.9.2-centos_linux64/bin:$PATH'
