@@ -17,8 +17,8 @@ pipeline {
                 //sh 'export PATH=/vol_c/richy/sratoolkit.2.9.2-centos_linux64/bin:$PATH'
                 //sh 'export PATH="$PATH:/vol_c/richy/sratoolkit.2.9.2-centos_linux64/bin'
                 sh 'echo $PATH'
-                sh 'prefetch -o kart cart_DAR51524_201901081853.krt'
-                sh 'prefetch -o kart cart_DAR51524_201901081854.krt'
+                //sh 'prefetch -o kart cart_DAR51524_201901081853.krt'
+                //sh 'prefetch -o kart cart_DAR51524_201901081854.krt'
 
                 }
             }
@@ -34,10 +34,13 @@ pipeline {
                 echo 'Testing..'
             }
         }
-        stage('Deploy') {
-            steps {
-                echo 'Deploying....'
-            }
+stage("SCP to cc ubuntu")
+node {
+  sshagent(credentials: ['CC_ubuntu_ssh']) {
+    sh 'scp -r /vol_c/richy/data/sra ritu@128.196.56.64:/media/ritu/sra_backup/NE_prostatecancer-trento_cornell_broad/RNAseq'
+
+  }
+}
         }
     }
 }
