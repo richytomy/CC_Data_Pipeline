@@ -34,7 +34,7 @@ pipeline {
                 echo 'Testing..'
             }
         }
-stage("SCP to cc ubuntu")
+stage('SCP')
 node {
   sshagent(credentials: ['CC_ubuntu_ssh']) {
     sh 'scp -r /vol_c/richy/data/sra ritu@128.196.56.64:/media/ritu/sra_backup/NE_prostatecancer-trento_cornell_broad/RNAseq'
