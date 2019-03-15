@@ -18,7 +18,7 @@ pipeline {
                 //sh 'export PATH="$PATH:/vol_c/richy/sratoolkit.2.9.2-centos_linux64/bin'
                 sh 'echo $PATH'
                 //sh 'prefetch -o kart cart_DAR51523_201901081846.krt' failed jenkins 35
-                sh 'prefetch -o kart cart_DAR51523_201901081923.krt'
+                sh 'prefetch -o kart cart_DAR51522_201901081909.krt'
 
 
                 }
