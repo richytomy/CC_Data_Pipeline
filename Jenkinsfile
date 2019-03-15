@@ -17,11 +17,8 @@ pipeline {
                 //sh 'export PATH=/vol_c/richy/sratoolkit.2.9.2-centos_linux64/bin:$PATH'
                 //sh 'export PATH="$PATH:/vol_c/richy/sratoolkit.2.9.2-centos_linux64/bin'
                 sh 'echo $PATH'
-                //sh 'prefetch -o kart cart_DAR51523_201901081846.krt'
-                //sh 'prefetch -o kart cart_DAR51524_201902221535.krt'
-                sh 'prefetch -o kart cart_DAR51524_201902221536.krt'
-                sh 'prefetch -o kart cart_DAR51524_201902221538.krt'
-                sh 'prefetch -o kart cart_DAR51524_201902221539.krt'
+                sh 'prefetch -o kart cart_DAR51523_201901081846.krt'
+
 
                 }
             }
