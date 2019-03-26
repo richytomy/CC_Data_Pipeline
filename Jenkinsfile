@@ -21,8 +21,8 @@ pipeline {
                 //sh 'prefetch -o kart cart_DAR51522_201901081909.krt' failed jenkins 40 phs000915.v1.p1.c2\Dataintegraterd_phs000915.v1.p1
                   //phs000915.v1.p1.c2\RNAseq_
                   //sh 'prefetch -o kart cart_DAR51524_201901081852.krt'
-                  sh 'prefetch -o kart cart_DAR51524_201901081853_t.krt'  
-                  sh 'prefetch -o kart cart_DAR51524_201901081853.krt'  
+                  //sh 'prefetch -o kart cart_DAR51524_201901081853_t.krt'  
+                  //sh 'prefetch -o kart cart_DAR51524_201901081853.krt'  
                   sh 'prefetch -o kart cart_DAR51524_201901081854.krt'  
 
                 }
