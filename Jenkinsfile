@@ -23,7 +23,7 @@ pipeline {
                   //sh 'prefetch -o kart cart_DAR51524_201901081852.krt'
                   //sh 'prefetch -o kart cart_DAR51524_201901081853_t.krt'  
                   //sh 'prefetch -o kart cart_DAR51524_201901081853.krt'  
-                  sh 'prefetch -o kart cart_DAR51524_201901081854.krt'  
+                  sh 'fastq-dump -I --split-files /vol_c/richy/data/sra/SRR3146714.sra'  
 
                 }
             }
