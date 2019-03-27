@@ -23,6 +23,7 @@ pipeline {
                   //sh 'prefetch -o kart cart_DAR51524_201901081852.krt'
                   //sh 'prefetch -o kart cart_DAR51524_201901081853_t.krt'  
                   //sh 'prefetch -o kart cart_DAR51524_201901081853.krt'  
+                  sh 'su - rpandey'
                   sh 'echo "$USER"'  
 
                 }
